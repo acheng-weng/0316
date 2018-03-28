@@ -88,7 +88,7 @@
     <li>排名2</li>
     <li>排名3</li>
 </ol>
-<p>下面是一个表格，给表格加了一个border=“1”好让你看出是一个表格<br />
+<p>下面是一个表格，给表格加了一个border=“1”好让你看出是一个表格</p>
 <table border="1">
     <tr>
         <th>表头</th>
@@ -119,17 +119,34 @@
         <td>总计</td>
         <td colspan="2">1000</td>
     </tr>
-</table></p>
+</table>
 <form method="post" action="save.php">
     <h2>这里以后是一个侧栏，这是侧栏的标题</h2>
     <h2>侧栏注册窗口标题</h2>
-    <label for="email">请输入邮箱地址：</label><input type="text" name="myName" value="这是一个文本输入框" id="email">
+    <label for="email">请输入邮箱地址：<input type="text" name="myName" placeholder="这是一个文本输入框" id="email"></label>
     <p>邮箱地址请按要求格式输入</p>
-    <label for="password">请输入密码：</label><input type="password" name="myPassword" value="这是一个密码输入框" id="password">
-    <label for="confirm">请重复输入密码：</label><input type="password" name="myConfirmPassword" value="这是一个密码输入框" id="confirm">
+    <label for="password">请输入密码：<input type="password" name="myPassword" placeholder="这是一个密码输入框" id="password"></label>
+    <label for="confirm">请重复输入密码：<input type="password" name="myConfirmPassword" placeholder="这是一个密码输入框" id="confirm"></label>
     <p>密码请为6-16位英文数字</p>
     <br />
-    性别：<label for="male">男</label><input type="radio" name="gender" value="1">
+    性别：
+    <label for="male"><input type="radio" name="gender" value="1" id="male">男</label>
+    <label for="female"><input type="radio" name="gender" value="2" id="female">女</label>
+    城市：
+    <select>
+        <option value="beijing" selected="selected">北京</option>
+        <option value="shanghai">上海</option>
+    </select>
+    爱好：
+    <label for="sports"><input type="checkbox" name="hobby" value="1" id="sports">运动</label>
+    <label for="arts"><input type="checkbox" name="hobby" value="2" id="arts">艺术</label>
+    <label for="science"><input type="checkbox" name="hobby" value="3" id="science">科学</label>
+    个人描述：
+    <textarea placeholder="这是一个多行输入框，输入您的个人描述"></textarea>
+    <input type="submit" value="确认提交" name="submit">
+    <br />
+    <footer>版权所有©</footer>
+
 </form>
 </body>
 </html>
