@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #dedede;
+}
+header {
+    background: #333333;
+}
+.nav {
+    float: right;
+    margin-top: 20px;
+}
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}

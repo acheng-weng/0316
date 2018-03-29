@@ -1,0 +1,16 @@
+body {
+    font: 16px "Comic Sans MS", cursive;
+    background: url("img/Blue-rule.png");
+}
+p :before{color: blue;
+    content: url("img/Yellow-pin.png");
+}
+#first {font-style: italic;}
+strong {
+    color: red;
+    background-color: #ddf;
+    font: 200% serif;
+}
+
+.carrot {color: red;}
+.spinach {color: green;}
