@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+body{
+    background: #dedede;
+}
+.top{/*头部整体div*/
+    width: 100%;
+    height: 27px;
+    background: url("../img/top_bg.jpg") repeat-x;
+}
+.top_content{/*头部内容div*/
+    width: 1000px;
+    margin: 0 auto;/*水平居中*/
+}
+.top_content li{/*头部内容div下的li标签（导航栏列表）的样式*/
+    list-style-image: url("../img/li_bg.gif");/*替换列表符号*/
+    float: right;/*向右浮动*/
+    width: 70px;
+    line-height: 27px;/*单个列表行高与头部整体div一致，使文字上下居中*/
+}
+.top_content a:link,.top_content a:visited{/*头部内容div下的a标签的“初始状态”和“访问之后的状态”都套用该样式*/
+    color: gray;
+    text-decoration: none;/*文本修饰；underline:加下划线，overline:顶上加一条线，line-through:中间穿过一条线，none:默认，标准文本（取消超链接的下划线）*/
+}
+.top_content a:hover,.top_content a:active{/*头部内容div下的a标签的“鼠标滑过状态”和“鼠标按下时的状态”都套用该样式*/
+    color: red;
+    text-decoration: none;
+}
