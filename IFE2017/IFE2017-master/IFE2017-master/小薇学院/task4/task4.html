@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>定位和居中问题</title>
+	<meta charset="utf-8">
+	<style>
+		*{padding: 0px;margin:0px;}
+		.host{
+			height: 200px;
+			max-width:400px;
+			background: #ccc;
+  			margin: auto;  
+  			position: absolute;  
+  			top: 0; left: 0; bottom: 0; right: 0; 
+  			
+		}
+		.left{
+			width: 50px;
+			height: 50px;
+			background-color: #fc0;
+			/*border-radius: 50%;  圆*/
+			border-radius: 0px 0px 50px 0px;
+		}
+		.right{
+			width: 50px;
+			height: 50px;
+			background-color: #fc0;
+			position: absolute;
+			bottom: 0px;
+			right: 0px;
+			border-radius: 50px 0px 0px 0px;
+		}
+	</style>
+</head>
+<body>
+	<div class="host">
+	<div class="left"></div>
+	<div class="right"></div>
+	</div>
+</body>
+</html>

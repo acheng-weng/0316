@@ -5,13 +5,23 @@ body {
 }
 header {
     background: #333333;
+    height: 60px;
+    position: relative;
 }
-.nav {
+header img{
+    margin-left:25px;
+}
+.nav{
+    position: absolute;top: 0;right: 0;
+}
+.nav li{
     float: right;
-    margin-top: 20px;
+    width: 110px;
 }
-.clearfix:after {
-    content: '';
-    display: block;
-    clear: both;
+.nav li a{
+    color:#e6eceb ;
+    text-decoration: none;
+}
+.nav li a:hover{
+    color: #6d6d6d;
 }
