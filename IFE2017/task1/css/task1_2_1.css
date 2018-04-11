@@ -5,8 +5,8 @@ body {
 }
 header {
     background: #333333;
-    height: 60px;
     /*position: relative;*/
+    overflow: hidden;
 }
 header img{
     margin-left:25px;

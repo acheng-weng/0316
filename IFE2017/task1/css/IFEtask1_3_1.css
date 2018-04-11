@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    padding: 20px;
+    background: #eeeeee;
+    border: 1px solid #999999;
+    overflow: hidden;
+}
+.left{
+    float: left;
+    width: 200px;
+    border: 1px solid #999999;
+    overflow: hidden;
+}
+.left img{
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+}
+.middle{
+    border: 1px solid #999999;
+    overflow: hidden;
+    margin-left: 220px;
+    margin-right: 140px;
+    padding: 20px;
+
+}
+.right{
+    float: right;
+    width: 120px;
+    border: 1px solid #999999;
+}
+.right img{
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+}
