@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>任务七：实现常见的技术产品官网的页面架构及样式布局</title>
+	<style type="text/css">
+		*{
+			margin: 0 auto;
+			padding: 0;
+			font-family: "Microsoft YaHei";
+			font-size: 14px;
+		}
+		body{
+			min-width: 1281px;
+		}
+		a{
+			text-decoration: none;
+			color: inherit;
+		}
+		#container{
+			margin-left: 35px;
+			margin-right: 34px;
+		}
+		nav{
+			overflow: auto;
+		}
+		nav img{
+			margin-top: 13px;
+			margin-left: 60px;
+			float: left;
+		}
+		nav p{
+			float: left;
+			margin-top: 19px;
+			margin-left: 10px;
+			font-size: 20px;
+		}
+		nav ul{
+			float: right;
+			margin-right: 45px;
+		}
+		nav ul li{
+			float: left;
+			padding: 15px 20px 17px;
+			list-style: none;
+			color: #787b83;
+		}
+		nav ul li .DL,.SY{
+			color: #e74f4d;
+		}
+		nav ul .SY{
+			border-bottom: 3px solid #e74f4d;
+		}
+		nav ul .DL{
+			padding-left: 16px;
+			background: url('_编组_2.png') no-repeat 0 17px;
+		}
+		
+		header .ZZ1{
+			background-color: rgba(0,0,0,0.2);
+			position: absolute;
+			height: 854px;
+			width: 100%;
+		}
+		header .img{
+			background: url('图一.png') no-repeat 0 0;
+  			height: 854px;
+  			position: relative;
+		}
+		header .img .begin{
+			position: absolute;
+			left: 115px;
+			top: 230px;
+		}
+		header .img .begin h1{
+			font-size: 60px;
+			color: #fff;
+			font-weight: normal;
+		}
+		header .img .begin p{
+			font-size: 21px;
+			color: #fff;
+		}
+		header .img .begin a{
+			display: block;
+			width: 335px;
+			height: 65px;
+			background-color: #e74f4d;
+			color: #fff;
+			text-align: center;
+			font-size: 30px;
+			line-height: 65px;
+			margin-top: 60px;
+			margin-left: 3px;
+		}
+		header .about ul{
+			width: 1280px;
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-top: 45px;
+			overflow: auto;
+		}
+		header .about ul li{
+			float: left;
+			list-style: none;
+			text-align: center;
+		}
+		header .about ul li p{
+			margin-top: 23px;
+			font-family: "SimHei";
+			color: #777777;
+			height: 53px;
+			width: 154px;
+			padding-left: 80px;
+			padding-right: 80px;
+		}
+		header .about ul li .line{
+			border-left: 1px solid #777777;
+		}
+		header .new_world{
+			width: 100%;
+			margin-top: 65px;
+			text-align: center;
+			background-color: #ededed; 
+			padding-top: 90px;
+			padding-bottom: 80px;
+		}
+		header .new_world p{
+			font-size: 54px;
+			color: rgba(50, 51, 51, 0.502);
+			font-family: "SimHei";
+		}
+
+		main .select{
+			height: 341px;
+			background: url('4-1.png') no-repeat 0 -610px;
+			position: relative;
+		}
+		main .select .ZZ2{
+			background-color: rgba(170,53,51,0.2); 
+			width: 100%;
+			height: 341px;
+			
+		}
+		main .select .word{
+			position: absolute;
+			top: 55px;
+			left: 450px;
+			text-align: center;
+		}
+		main .select .word h1{
+			font-size: 21px;
+			color: #fff;
+			line-height: 23px;
+		}
+		main .select .word p{
+			font-size: 12px;
+			color: #bf4f48;
+			line-height: 35px;
+		}
+		main .select form{
+			position: absolute;
+			top: 170px;
+			left: 125px;
+		}
+		main .select form select,input{
+			width: 235px;
+			height: 35px;
+			margin-right: 30px;
+		}
+		main .select form select{
+			border: 1px solid #a8aaaa;
+			padding-left: 13px;
+			color: #a8aaaa;
+		}
+		main .select form select option{
+			line-height: 50px;
+			padding-top: 20px;
+		}
+		main .select form select option:hover{
+			background-color: #bf4f48; 
+		}
+		
+		main .select form input{
+			background-color: #bf4f48;
+			border: none;
+			color: #fff;
+			cursor: pointer; 
+		}
+		main .activity{
+			position: relative;
+			height: 605px;
+			background-color: #f8f7f7; 
+		}
+		main .activity .img_1{
+			position: absolute;
+			left: 155px;
+			top: 115px;
+			z-index: 999;
+		}
+		main .activity .img_2{
+			position: absolute;
+			left: 220px;
+			top: 100px;
+			z-index: 999;
+		}
+		main .activity .div1,.div2,.div3,.div4{
+			width: 222px;
+			height: 390px;
+			position: absolute;
+			text-align: center;
+		}
+		main .activity .div1{
+			left: 145px;
+			top: 101px;
+		}
+		main .activity .div2{
+			left: 400px;
+			top: 101px;
+		}
+		main .activity .div3{
+			left: 657px;
+			top: 101px;
+		}
+		main .activity .div4{
+			left: 913px;
+			top: 101px;
+		}
+		main .activity div .img1,.img3,.img4{
+			height: 335px;
+			width: 220px;
+			border: 1px solid #e0e0e0;
+			background-color: #fff;
+			border-bottom: none;
+		}
+		main .activity div .img2{
+			height: 335px;
+			width: 220px;
+			border: 1px solid #e0e0e0;
+			background-color: #fff;
+			margin-top: 50px;
+		}
+		main .stage{
+			height: 1087px;
+			overflow: hidden;
+		}
+		main .stage .img1{
+			height: 566px;
+			position: relative;
+			float: left;
+		}
+		main .stage .img1:after{   
+		    content: url("arraw1.png");
+		    display: block;
+		   	position: absolute;
+		   	top: 265px;
+		   	right: -1px; 
+		}
+		main .stage .img1 div{
+			position: absolute;
+			left: 240px;
+			top: 135px;
+			color: #fff;
+			text-align: center;
+		}
+		main .stage .img1 div h2{
+			font-size: 49px;
+			font-weight: normal;
+		}
+		main .stage .img1 div h1{
+			font-size: 158px;
+			font-weight: normal;
+			line-height: 125px;
+		}
+		main .stage .img1 div p{
+			font-size: 22px;
+			margin-top: 20px;
+			margin-left: 90px;
+			text-align: left;
+		}
+		main .stage .section{
+			height: 406px;
+			padding: 160px 70px 0; 
+			float: left;
+		}
+		main .stage .section img{
+			margin-left: 90px;
+		}
+		main .stage .section p{
+			width: 288px;
+			font-size: 12px;
+			color: #aaaaaa;
+			line-height: 2.5;
+			margin-top: 50px;
+		}
+		main .stage .section .div1{
+			width: 105px;
+			height: 35px;
+			margin-top: 50px;
+			font-size: 12px;
+			line-height: 2.5;
+			text-align: center;
+			border: 1px solid #e25c60;
+			color: #e25c60;
+		}
+		main .stage .section .div2{
+			height: 20px;
+			margin-left: 53px;
+			margin-top: 25px;
+		}
+		main .stage .section .div2 img{
+			margin-left: 15px;
+		}
+		main .stage .new1,.new2{
+			width: 425px;
+			height: 348px;
+			float: left;
+			text-align: center;
+			padding-top: 173px;
+		}
+		main .stage h1{
+			font-size: 21px;
+  			font-family: "SimHei";
+  			line-height: 1.446;
+  			font-weight: normal;
+		}
+		main .stage hr{
+			width: 30px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		main .stage .new1 hr{
+			border-top: 1px solid #fff;
+		}
+		main .stage .new2 hr{
+			border-top: 1px solid #ababab;
+		}
+		main .stage div div{
+			width: 170px;
+			padding: 11px 0;
+		}
+		main .stage .new1 div{
+			border: 1px solid #fff;
+		}
+		main .stage .new2 div{
+			border: 1px solid #e74f4d;
+			color: #e74f4d;
+		}
+		main .stage div div span{
+			font-size: 21px;
+  			font-family: "SimHei";
+		}
+		main .stage .new1{
+			background-color: #e7504d;
+			color: #fff;
+		}
+		main .stage .img2{
+			position: relative;
+		}
+		main .stage .img2:before{   
+		    content: url("arraw2.png");
+		    display: block;
+		   	position: absolute;
+		   	bottom: 245px;
+		   	right: 405px; 
+		}
+
+		section{
+			padding: 115px 138px 165px;
+			overflow: auto;
+		}
+		section h1{
+			text-align: center;
+			font-size: 21px;
+  			font-family: "SimHei";
+  			font-weight: normal;
+  			line-height: 1.446;
+  			color: #323333;
+		}
+		section hr{
+			width: 30px;
+			border-top: 2px solid #ea6563;
+			margin-top: 5px;
+			margin-bottom: 15px;
+		}
+		section p{
+			font-size: 12px;
+			line-height: 1.5;
+			text-align: center;
+			color: #aaaaaa;
+		}
+		section .left{
+			margin-top: 70px;
+			width: 290px;
+			float: left;
+		}
+		section .left div{
+			margin-top: 35px;
+		}
+		section .left h2{
+			font-family: "SimHei";
+			color: rgba(35, 24, 21, 0.8);
+			line-height: 1.929;
+		}
+		section .left p{
+			font-size: 12px;
+			font-family: "SimSun";
+			color: rgba(35, 24, 21, 0.6);
+			line-height: 1.75;
+			text-align: left;
+			margin-top: 25px;
+			position: relative;
+		}
+		section .left p:after{
+			content: "more";
+			padding-left: 15px;
+			background: url("arraw3.png") no-repeat 0 8px;
+			cursor: pointer;
+			position: absolute;
+			bottom: -15px;
+			right: 0;
+		}
+		section form{
+			width: 660px;
+			margin-top: 90px;
+			float: right;
+		}
+		section form div{
+			width: 280px;
+			background-color: #edecee;
+			margin-top: 15px;
+			margin-left: 20px;
+			float: left;
+			padding: 6px 15px;
+			font-size: 12px;
+			font-family: "SimSun";
+			color: rgba(35, 24, 21, 0.8);
+			line-height: 2.25;
+		}
+		section form div input,textarea{
+			border: none;
+			background-color: inherit;
+			outline: none;
+		}
+		section form div input{
+			width: 200px;
+			margin-right: 0;
+		}
+		section form .textarea{
+			width: 610px;
+		}
+		section form .textarea textarea{
+			width: 550px;
+			height: 90px;
+		}
+		section form .submit{
+			width: 640px;
+			height: 40px;
+			background-color: #edecee;
+			margin-top: 15px;
+			margin-left: 20px;
+			padding: 6px 15px;
+			border: none;
+			cursor: pointer;
+  			font-family: "SimHei";
+  			color: #323233;
+		}
+
+		footer{
+			text-align: center;
+		}
+		footer .top{
+			color: #fff;
+			padding-top: 92px;
+			padding-bottom: 70px; 
+			background-color: #32353e;
+		}
+		footer .top h1{
+			font-size: 21px;
+			font-family: "SimHei";
+			line-height: 2.303;
+			font-weight: normal;
+		}
+		footer .top p{
+			font-size: 12px;
+			font-family: "SimSun";
+			line-height: 1.5;
+		}
+		footer .top form{
+			width: 510px;
+			overflow: auto;
+			margin-top: 30px;
+		}
+		footer .top form input{
+			float: left;
+			border: none;
+			margin: 0;
+		}
+		footer .top form .text{
+			width: 418px;
+			padding-left: 10px;
+		}
+		footer .top form .submit{
+			width: 80px;
+			cursor: pointer;
+			color: #fff;
+			background-color: #707278;
+		}
+		footer .pic{
+			margin-top: 35px;
+		}
+		footer .pic img{
+			margin: 0 13px;
+			cursor: pointer;
+		}
+		footer .bottom{
+			background-color: #2f2f38;
+			color: #fff;
+			overflow: auto;
+			padding: 30px 40px 15px 100px;
+		}
+		footer .bottom span{
+			cursor: pointer;
+		}
+		footer .bottom .left{
+			float: left;
+		}
+		footer .bottom .right{
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<nav id="top">
+			<img src="./_编组_1.png">
+			<p>新世界</p>
+			<ul>
+				<li class="SY"><a href="#">首页</a></li>
+				<li><a href="#">最新活动</a></li>
+				<li><a href="#">项目介绍</a></li>
+				<li><a href="#">爱心社区</a></li>
+				<li><a href="#">关于我们</a></li>
+				<li class="DL"><a href="#">登录</a></li>
+			</ul>
+		</nav>
+		<header>
+			<div class="img">
+				<div class="ZZ1"></div>
+				<div class="begin">
+					<h1>Time of new life</h1>
+					<p>新时代，年轻的人们让我们一起<br />体验新生活，享受新生活</p>
+					<a>开始体验</a>
+				</div>
+			</div>
+			<div class="about">
+				<ul>
+					<li>
+						<img src="2-1.png">
+						<p>打造全新世界观，让你更爱你的生活</p>
+					</li>
+					<li>
+						<img src="2-2.png">
+						<p class="line">丰富多彩的公益活动，发挥新世界的主人公意识</p>
+					</li>
+					<li>
+						<img src="2-3.png">
+						<p class="line">时尚的新理念，超前体验未知的生活</p>
+					</li>
+					<li>
+						<img src="2-4.png">
+						<p class="line">完善的培养机制，培养你全新的世界观</p>
+					</li>
+				</ul>
+			</div>
+			<div class="new_world">
+				<img src="3-1.png">
+				<p>关于新世界，你不知道的还有什么？</p>
+			</div>
+		</header>
+		<main>
+			<div class="select">
+				<div class="ZZ2"></div>
+				<div class="word">
+					<h1>查找新世界城市活动信息</h1>
+					<h1>—</h1>
+					<p>每个城市的有不同的活动信息，请自主查询您所需要了解的城市</p>
+				</div>
+				<form>
+					<select>
+					  <option value ="China">中国</option>
+					  <option value ="American">美国</option>
+					  <option value="Japan">日本</option>
+					  <option value="Russia">俄罗斯</option>
+					</select>
+					<select>
+					  <option value ="Beijing">北京市</option>
+					  <option value="Tianjin">天津市</option>
+					  <option value="Hebei">河北省</option>
+					  <option value="Hubei">湖北省</option>
+					  <option value="Guangdong">广东省</option>
+					</select>
+					<select>
+					  <option value ="City">城市</option>
+					  <option value ="saab">深圳市</option>
+					  <option value="opel">广州市</option>
+					  <option value="audi">惠州市</option>
+					</select>
+					<input type="button" name="search" value="搜 &nbsp 索">
+				</form>	
+			</div>
+			<div class="activity">
+				<img src="图三－图六.png" class="img_1">
+				<img src="文字.png" class="img_2">
+				<div class="div1">
+					<div class="img1"></div>
+				</div>
+				<div class="div2">
+					<div class="img2"></div>
+				</div>	
+				<div class="div3">
+					<div class="img3"></div>
+				</div>
+				<div class="div4">
+					<div class="img4"></div>
+				</div>
+			</div>
+			<div class="stage">
+				<div class="img1">
+					<img src="6-1.png">
+					<div>
+						<h2>新世界</h2>
+						<h1>TIME</h1>
+						<p>@新世界 - 北京</p>
+						<p>2016.04.01</p>
+					</div>
+				</div>
+				<div class="section">
+					<img src="新世界／01.png">
+					<p>新世界是个新世界新世界是个新世界新世界是个新世界 新世界是个新世界新世界是个新世界新世界是个新世界 新世界是个新世界新世界是个新世界新世界是个新世界 新世界是个新世界新世界是个新世界</p>
+					<div class="div1"><span>更多详情</span></div>
+					<div class="div2">
+						<img src="dot1.png">
+						<img src="dot2.png">
+						<img src="dot2.png">
+					</div>
+				</div>
+				<div class="new1">
+					<h1>新时代</h1>
+					<h1>关于爱生活的我们</h1>
+					<hr />
+					<div><span>查看更多</span></div>
+				</div>
+				<div class="new2">
+					<h1>新时代</h1>
+					<h1>关于爱生活的我们</h1>
+					<hr />
+					<div><span>查看更多</span></div>
+				</div>
+				<div class="img2">
+					<img src="7-1.png">
+				</div>
+			</div>
+		</main>
+		<section>
+			<h1>成为我们的志愿者</h1>
+			<hr />
+			<p>新世界的大家庭需要每一个爱生活的人的加入，如果你够年轻，有梦想，有激情</p>
+			<p>那就不要犹豫，快来加入我们，成为改变所有人生活的人 </p>
+			<div class="left">
+				<div class="agreement">
+					<h2>新世界志愿者协议</h2>
+					<p>加入新世界志愿者的人员必须遵守中华人民共共和国的 相关法律法规，并且本着平等资源的原则 ......</p>
+				</div>
+				<div class="power">
+					<h2>新世界志愿者权利</h2>
+					<p>新世界志愿者享受新世界内部所有资源共享的权利，并且享受所在四新世界活动的优先参与资格</p>
+				</div>
+				<div class="more">
+					<h2>更多条款</h2>
+					<p></p>
+				</div>
+			</div>
+			<form>
+				<div>
+					<label>姓名：</label>
+					<input type="text" name="name">
+				</div>
+				<div>
+					<label>年龄：</label>
+					<input type="text" name="age">
+				</div>
+				<div>
+					<label>联系方式：</label>
+					<input type="text" name="phonenumber">
+				</div>
+				<div>
+					<label>联系地址：</label>
+					<input type="text" name="address">
+				</div>
+				<div class="textarea">
+					<label>请简单描述您梦想的生活：</label>
+					<br />
+					<textarea></textarea>
+				</div>
+				<input type="submit" name="submit" class="submit" value="提交申请">
+			</form>
+		</section>
+		<footer>
+			<div class="top">
+				<h1>联系我们</h1>
+				<p>为了更好的获取我们最新的产品资讯，您可以留下您的电子邮箱快速订阅我们的产品资讯</p>
+				<p>也可以通过以下任何方式关注我们动态</p>
+				<form>
+					<input type="text" name="text" class="text" placeholder="someone@email.com">
+					<input type="submit" name="submit" class="submit" value="提 交">
+				</form>
+				<div class="pic">
+					<img src="f-1.png">
+					<img src="f-2.png">
+					<img src="f-3.png">
+					<img src="f-4.png">
+				</div>
+			</div>
+			<div class="bottom">
+				<span class="left">@2016新世界</span>
+				<span class="right"><a href="#top" target="_self">Back to top</a></span>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

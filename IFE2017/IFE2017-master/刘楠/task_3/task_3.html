@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>task_3</title>
+	<style>
+	* {
+		box-sizing: border-box;
+	}
+	div {
+		border: 1px solid #aaa;
+		background: #fff;
+	}
+	img {
+		width: 80px;
+		height: 80px;
+	}
+	.clearfix:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	.ct {
+		background: #eee;
+		padding: 20px;
+		margin: 20px;
+	}
+	.left {
+		float: left;
+		width: 200px;
+		padding: 20px;
+	}
+	.left>span {
+		float: right;
+		margin-right: 10px;
+	}
+	.right {
+		float: right;
+		width: 120px;
+		padding: 10px;
+	}
+	.right>img {
+		margin: 10px;
+	}
+	.mid {
+		margin-left: 220px;
+		margin-right: 140px;
+		padding: 0 10px;
+	}
+	</style>
+</head>
+<body>
+	<div class="ct clearfix">
+		<div class="left">
+			<img src="./1.jpg">
+			<span>Lucifer</span>
+		</div>
+		<div class="right">
+
+			<img src="./1.jpg">
+			<img src="./1.jpg">
+			<img src="./1.jpg">
+			<img src="./1.jpg">
+		</div>
+		<div class="mid">
+			<p>Lucifer</p>
+			<p>就一个人啦，喜欢前端开发，刷题提高，嘻嘻~</p>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<p>本人邮箱：clc.lucifer@gmail.com</p>
+		</div>
+	</div>
+</body>
+</html>

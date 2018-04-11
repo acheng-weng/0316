@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>task_12</title>
+	<style>
+	.tab {
+		margin: 30px auto;
+	}
+	.tab tr th {
+		background: #000;
+		color: #fff;
+		font-weight: normal;
+		text-align: left;
+	}
+	.tab tr:nth-child(2),
+	.tab tr:nth-child(3),
+	.tab tr:nth-child(4) {
+		color: #f00;
+	}
+	.tab tr:nth-child(odd) {
+		background: #ccc;
+	}
+	.tab tr td:nth-child(2) {
+		border-left: 1px solid #fff;
+		border-right: 1px solid #fff; 
+	}
+
+	.ipt {
+		width: 100px;
+		display: block;
+		margin: 30px auto;
+		transition: all .5s;
+	}
+	.ipt:focus {
+		width: 180px;
+	}
+
+	.scroll {
+		width: 250px;
+		height: 150px;
+		position: relative;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.scroll ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+	}
+	.scroll ul:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.item {
+		width: 750px;
+		animation: move 10s ease-out infinite alternate;
+	}
+	.item li {
+		width: 250px;
+		height: 150px;
+		float: left;
+	}
+	.item li:nth-child(1) {
+		background: #f00;
+	}
+	.item li:nth-child(2) {
+		background: #0f0;
+	}
+	.item li:nth-child(3) {
+		background: #00f;
+	}
+	.tag {
+		bottom: 0;
+		right: 0;
+	}
+	.tag li {
+		float: left;
+	}
+	.tag li>a {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		background: rgba(225, 225, 225, .5);
+		text-align: center;
+		text-decoration: none;
+		line-height: 30px;
+		color: #fff;
+		margin-left: 2px;
+	}
+
+	@keyframes move {
+		0%,30% {left: 0px;}
+        35%,65% {left: -250px;}
+        70%,100% {left: -500px;}
+	}
+	</style>
+</head>
+<body>
+<div class="ct">
+	<table class="tab">
+		<tr>
+			<th>排名</th>
+			<th>网站</th>
+			<th>热度</th>
+		</tr>
+		<tr>
+			<td>1.</td>
+			<td>百度前端技术学院</td>
+			<td>13000</td>
+		</tr>
+		<tr>
+			<td>2.</td>
+			<td>百度前端技术学院</td>
+			<td>12000</td>
+		</tr>
+		<tr>
+			<td>3.</td>
+			<td>百度前端技术学院</td>
+			<td>11000</td>
+		</tr>
+		<tr>
+			<td>4.</td>
+			<td>百度前端技术学院</td>
+			<td>10000</td>
+		</tr>
+		<tr>
+			<td>5.</td>
+			<td>百度前端技术学院</td>
+			<td>9000</td>
+		</tr>
+		<tr>
+			<td>6.</td>
+			<td>百度前端技术学院</td>
+			<td>8000</td>
+		</tr>
+		<tr>
+			<td>7.</td>
+			<td>百度前端技术学院</td>
+			<td>7000</td>
+		</tr>
+		<tr>
+			<td>8.</td>
+			<td>百度前端技术学院</td>
+			<td>6000</td>
+		</tr>
+		<tr>
+			<td>9.</td>
+			<td>百度前端技术学院</td>
+			<td>5000</td>
+		</tr>
+		<tr>
+			<td>10.</td>
+			<td>百度前端技术学院</td>
+			<td>4000</td>
+		</tr>
+	</table>
+
+	<input type="text" class="ipt">
+
+	<div class="scroll">
+		<ul class="item">
+			<li id="li-1"></li>
+			<li id="li-2"></li>
+			<li id="li-3"></li>
+		</ul>
+		<ul class="tag">
+			<li><a href="#li-1">1</a></li>
+			<li><a href="#li-2">2</a></li>
+			<li><a href="#li-3">3</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
