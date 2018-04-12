@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #dedede;
+}
+header {
+    background: #333333;
+    /*position: relative;*/
+    overflow: hidden;
+}
+header img{
+    margin-left:25px;
+}
+.nav{
+    /*position: absolute;top: 0;right: 0;*/
+    float: right;
+    margin-top: 20px;
+}
+.nav li{
+    float: left;
+    width: 110px;
+}
+.nav a{
+    color:#e6eceb ;
+    text-decoration: none;
+}
+.nav a:hover{
+    color: #6d6d6d;
+}
+.section{
+    background: #ffffff;
+    width: 93%;
+    margin: 30px auto;
+    padding: 5px 25px;
+    box-shadow: 2px 2px 2px #9f9f9f;
+}
+.section2{
+    background: #ffffff;
+    width: 92%;
+    margin-top: 50px;
+    margin-left: 30px;
+    padding: 5px 25px;
+    box-shadow: 2px 2px 2px #9f9f9f;
+}
+.section ul{
+    list-style: none;
+}
+.h3{
+    font-size: 20px;
+    color: #686b70;
+}
+.author{
+    font-size: 14px;
+    color: #6d6d6d;
+}
+.indent{
+    text-indent: 2em;
+}
+dd{
+    border: 1px solid  #9f9f9f;
+    width: 200px;
+    text-align: center;
+    padding: 10px 0;
+
+}
+table,th,td{
+    border: 1px solid #cccccc;
+    text-align: left;
+    padding-left: 0.5em;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom:20px;
+}
+
+th{
+    background: #333333;
+    color: white;
+}
+.total{
+    background: #cccccc;
+    font-weight:bold ;
+}
+.section2 h2{
+    border-left: 3px solid #cccccc;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 15px;
+}
+form{
+    display: table;
+    margin: 30px auto 0 auto;
+    /*padding: 10px;*/
+}
+form textarea{
+    width: 500px;
+    height: 200px;
+}
+.tablerow{
+    display: table-row;
+}
+.tablerow p{
+    display: table-cell;
+    padding: 3px;
+    vertical-align: top;
+}
+.tablerow p:first-child{
+    text-align: right;
+}
+.tablerow .prompt{
+    color: #cccccc;
+}
+#subt{
+    width: 100%;
+    height: 40px;
+    background: #3355d0;
+    color: white;
+    margin: 10px auto 20px auto ;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+footer{
+    background: #000000;
+    text-align: center;
+    height: 50px;
+    color: white;
+    padding-top: 10px;
+    font-size: 12px;
+}
